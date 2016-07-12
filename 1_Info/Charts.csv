@@ -1,0 +1,32 @@
+Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max
+1TC,B101 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+2TC,B101 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+3TC,B100 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+4TC,B100 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+5TC,B102 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+6TC,B103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+7TC,Pallet Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+8TC,C101 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+9TC,C101 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+10TC,C100 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+11TC,C100 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+12TC,C102 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+13TC,C103 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+14TC,Smoke Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
+15TC,B103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+16TC,B102 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+17TC,B104 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+18TC,B105 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+19TC,B101 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+20TC,North B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+21TC,East Door B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+22TC,South B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+Heat_Flux_A,Pallet Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,
+Gas_A,Pallet Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,
+Carbon_Monoxide_A,Pallet Prop Gas Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,
+Heat_Flux_B,OSB Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,
+Gas_B,OSB Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,
+Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,
+Heat_Flux_C,Smoke Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,
+Gas_C,Smoke Prop Gas Concentration,Percent,Percent Concentration,0,25,bottom_right,,,
+Carbon_Monoxide_C,Smoke Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,

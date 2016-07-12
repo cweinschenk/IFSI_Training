@@ -1,0 +1,37 @@
+Channel_Name,Channel_Label,Scale_Factor,Offset,Type,Chart
+8TC1,1 Foot,1.8,32,Temperature,8TC
+8TC3,3 Foot,1.8,32,Temperature,8TC
+8TC5,5 Foot,1.8,32,Temperature,8TC
+8TC7,7 Foot,1.8,32,Temperature,8TC
+9TC1,1 Foot,1.8,32,Temperature,9TC
+9TC3,3 Foot,1.8,32,Temperature,9TC
+9TC5,5 Foot,1.8,32,Temperature,9TC
+9TC7,7 Foot,1.8,32,Temperature,9TC
+10TC1,1 Foot,1.8,32,Temperature,10TC
+10TC3,3 Foot,1.8,32,Temperature,10TC
+10TC5,5 Foot,1.8,32,Temperature,10TC
+10TC7,7 Foot,1.8,32,Temperature,10TC
+11TC1,1 Foot,1.8,32,Temperature,11TC
+11TC3,3 Foot,1.8,32,Temperature,11TC
+11TC5,5 Foot,1.8,32,Temperature,11TC
+11TC7,7 Foot,1.8,32,Temperature,11TC
+12TC1,1 Foot,1.8,32,Temperature,12TC
+12TC3,3 Foot,1.8,32,Temperature,12TC
+12TC5,5 Foot,1.8,32,Temperature,12TC
+12TC7,7 Foot,1.8,32,Temperature,12TC
+13TC1,1 Foot,1.8,32,Temperature,13TC
+13TC3,3 Foot,1.8,32,Temperature,13TC
+13TC5,5 Foot,1.8,32,Temperature,13TC
+13TC7,7 Foot,1.8,32,Temperature,13TC
+14TC1,1 Foot,1.8,32,Temperature,14TC
+14TC3,3 Foot,1.8,32,Temperature,14TC
+14TC5,5 Foot,1.8,32,Temperature,14TC
+14TC7,7 Foot,1.8,32,Temperature,14TC
+HF3V,C100 Floor Heat Flux,1965,0,HeatFlux,Heat_Flux_C
+HF4V,C102 Floor Heat Flux,1900,0,HeatFlux,Heat_Flux_C
+G1O2V,C102 Oxygen,5,0,Gas,Gas_C
+G1COV,C102 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_C
+G1CO2V,C102 Carbon Dioxide,5,0,Gas,Gas_C
+G2O2V,C103 Oxygen,5,0,Gas,Gas_C
+G2COV,C103 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_C
+G2CO2V,C103 Carbon Dioxide,5,0,Gas,Gas_C
