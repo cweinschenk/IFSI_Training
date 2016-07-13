@@ -85,7 +85,7 @@ for experiment in experiment_info.index:
 
 	charts_data = charts_data.set_index('Chart')
 
-	output_location = '../3_charts/Experiment ' + str(experiment) + '/'
+	output_location = '../3_charts/Experiment_' + str(experiment) + '/'
 
 	# If the folder doesn't exist create it.
 	if not os.path.exists(output_location):
