@@ -1,10 +1,10 @@
 Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max
-1TC,B101 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-2TC,B101 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-3TC,B100 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-4TC,B100 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-5TC,B102 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-6TC,B103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+1TC,A101 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+2TC,A101 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+3TC,A100 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+4TC,A100 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+5TC,A102 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
+6TC,A103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
 7TC,Pallet Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
 8TC,C101 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
 9TC,C101 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333
