@@ -21,10 +21,10 @@ Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max
 20TC,North B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
 21TC,East Door B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
 22TC,South B100 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444
-Heat_Flux_A,Pallet Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,
+Heat_Flux_A,Pallet Prop Heat Flux,kW/m2,kW/m2,0,10,top_left,,,
 Gas_A,Pallet Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,
 Carbon_Monoxide_A,Pallet Prop Gas Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,
-Heat_Flux_B,OSB Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,
+Heat_Flux_B,OSB Prop Heat Flux,kW/m2,kW/m2,0,10,top_left,,,
 Gas_B,OSB Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,
 Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,
 Heat_Flux_C,Smoke Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,

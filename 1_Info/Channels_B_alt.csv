@@ -31,11 +31,11 @@ Channel_Name,Channel_Label,Scale_Factor,Offset,Type,Chart
 22TC3,3 Foot,1.8,32,Temperature,22TC
 22TC5,5 Foot,1.8,32,Temperature,22TC
 22TC7,7 Foot,1.8,32,Temperature,22TC
-HF5V,A100 Floor Heat Flux,1828,0,HeatFlux,Heat_Flux_B
-HF6V,A102 Floor Heat Flux,1859,0,HeatFlux,Heat_Flux_B
-G1O2V,C102 Oxygen,5,0,Gas,Gas_B
-G1COV,C102 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
-G1CO2V,C102 Carbon Dioxide,5,0,Gas,Gas_B
-G2O2V,C103 Oxygen,5,0,Gas,Gas_B
-G2COV,C103 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
-G2CO2V,C103 Carbon Dioxide,5,0,Gas,Gas_B
+HF5V,B100 Floor Heat Flux,1828,0,HeatFlux,Heat_Flux_B
+HF6V,B101 Floor Heat Flux,1859,0,HeatFlux,Heat_Flux_B
+G1O2V,B101 Oxygen,5,0,Gas,Gas_B
+G1COV,B101 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
+G1CO2V,B101 Carbon Dioxide,5,0,Gas,Gas_B
+G2O2V,B100 Oxygen,5,0,Gas,Gas_B
+G2COV,B100 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
+G2CO2V,B100 Carbon Dioxide,5,0,Gas,Gas_B

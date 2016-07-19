@@ -42,10 +42,10 @@ info_file = '../3_Info/Description_of_Experiments.csv'
 #Set Tools for Bokeh Plots
 TOOLS = 'box_zoom,reset,hover,pan,wheel_zoom'
 
-experiments=[2]
-prop = ['C']
-# experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-# prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
+# experiments=[4]
+# prop = ['B']
+experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
 
 
 experiment_info = pd.DataFrame({'Experiment':experiments,'Prop':prop})
@@ -155,6 +155,13 @@ for experiment in experiment_info.index:
 		if charts_data['2ndY'][chart] is not nan:
 			p.extra_y_ranges={charts_data['2ndY'][chart]:Range1d(charts_data['2ndY_Min'][chart],charts_data['2ndY_Max'][chart])}
 			p.add_layout(LinearAxis(y_range_name=charts_data['2ndY'][chart], axis_label=charts_data['2ndY'][chart]), 'right')
+		
+		if chart in ['Gas_B','Carbon_Monoxide_B']:
+			print ('This is a Gas_B or Carbon_Monxide_B chart.')
+			if experiment == 4:
+				print ('adding patch')
+				p.patch([Start_Time, Start_Time, Start_Time+timedelta(minutes=15, seconds=33), Start_Time+timedelta(minutes=15, seconds=33)], 
+					[charts_data['Y_Min'][chart], charts_data['Y_Max'][chart],  charts_data['Y_Max'][chart], charts_data['Y_Min'][chart]], color="grey", alpha=0.5, line_width=1)	
 		save(p)
 		reset_output()
 
