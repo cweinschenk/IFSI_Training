@@ -42,8 +42,10 @@ info_file = '../3_Info/Description_of_Experiments.csv'
 #Set Tools for Bokeh Plots
 TOOLS = 'box_zoom,reset,hover,pan,wheel_zoom'
 
-experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
+experiments=[2]
+prop = ['C']
+# experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+# prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
 
 
 experiment_info = pd.DataFrame({'Experiment':experiments,'Prop':prop})
