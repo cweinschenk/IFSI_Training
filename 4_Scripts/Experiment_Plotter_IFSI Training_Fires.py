@@ -42,8 +42,8 @@ info_file = '../3_Info/Description_of_Experiments.csv'
 #Set Tools for Bokeh Plots
 TOOLS = 'box_zoom,reset,hover,pan,wheel_zoom'
 
-# experiments=[4]
-# prop = ['B']
+# experiments=[2]
+# prop = ['C']
 experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
 prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
 
@@ -156,13 +156,53 @@ for experiment in experiment_info.index:
 			p.extra_y_ranges={charts_data['2ndY'][chart]:Range1d(charts_data['2ndY_Min'][chart],charts_data['2ndY_Max'][chart])}
 			p.add_layout(LinearAxis(y_range_name=charts_data['2ndY'][chart], axis_label=charts_data['2ndY'][chart]), 'right')
 		
+		#Add Grey Data box over bad data.
 		if chart in ['Gas_B','Carbon_Monoxide_B']:
 			print ('This is a Gas_B or Carbon_Monxide_B chart.')
 			if experiment == 4:
 				print ('adding patch')
 				p.patch([Start_Time, Start_Time, Start_Time+timedelta(minutes=15, seconds=33), Start_Time+timedelta(minutes=15, seconds=33)], 
 					[charts_data['Y_Min'][chart], charts_data['Y_Max'][chart],  charts_data['Y_Max'][chart], charts_data['Y_Min'][chart]], color="grey", alpha=0.5, line_width=1)	
-		save(p)
+
+		save(p)	
 		reset_output()
 
+		# print (chart)
+		# print (charts_data['Exp_Note'][chart])
+		# exit()
+		#Add Notes to html files as needed
+		
+		#Check to see if thre is a note
+		if not pd.isnull(charts_data['Exp_Note'][chart]):
+			
+			#Read in the notes
+			exp_note = charts_data['Notes'][chart]
+			
+			#Seperate if more than 1 note
+			exp_note = exp_note.split('|',1)
+			
+			#Seperate if more than one experiment
+			exp_exp = np.fromstring(charts_data['Exp_Note'][chart], sep='|')
+			
+			#check to see if seperator existed. If not replace with original value
+			if len(exp_exp) == 1:
+				exp_exp = float(charts_data['Exp_Note'][chart])
+			else:
+				contintue
+
+			chart_notes = pd.DataFrame({'Exp':exp_exp, 'Note':exp_note})
+			chart_notes = chart_notes.set_index('Exp')
+
+			if float(experiment) in chart_notes.index.values:
+				f = open(output_location + chart + '.html', 'r')
+				contents = f.readlines()
+				f.close
+
+				note = '<p><b>Note: ' + chart_notes['Note'][float(experiment)] + '</b></p>'
+				contents.insert(-2,note)
+
+				f = open(output_location + chart + '.html', 'w')
+				contents = "".join(contents)
+				f.write(contents)
+				f.close
 
