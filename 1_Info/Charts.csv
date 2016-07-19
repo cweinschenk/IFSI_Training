@@ -8,8 +8,8 @@ Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max,Exp
 7TC,Pallet Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 8TC,C101 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
 9TC,C101 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36
-10TC,C100 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36
-11TC,C100 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,17,Sensor error after 11:38:00
+10TC,C100 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
+11TC,C100 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,17|18,Sensor error after 11:38:00|Sensor error after 14:47:36
 12TC,C102 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
 13TC,C103 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,2,Sensor error between 11:47:30-11:49:30. Reading of elevated temperature is not accurate.
 14TC,Smoke Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36

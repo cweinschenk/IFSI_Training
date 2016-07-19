@@ -198,7 +198,7 @@ for experiment in experiment_info.index:
 					print ('adding patch')
 					p.patch([End_Time - timedelta(minutes=8,seconds=19), End_Time - timedelta(minutes=8,seconds=19), End_Time, End_Time], 
 						[charts_data['Y_Min'][chart], charts_data['Y_Max'][chart],  charts_data['Y_Max'][chart], charts_data['Y_Min'][chart]], color="grey", alpha=0.5, line_width=1)	
-			if chart in ['9TC','10TC','14TC']:
+			if chart in ['9TC','14TC','11TC']:
 				if experiment == 18:
 					print ('adding patch')
 					p.patch([End_Time - timedelta(minutes=5,seconds=50), End_Time - timedelta(minutes=5,seconds=50), End_Time, End_Time], 
@@ -222,12 +222,12 @@ for experiment in experiment_info.index:
 				
 				#Seperate if more than one experiment
 				exp_exp = np.fromstring(charts_data['Exp_Note'][chart], sep='|')
-				
+
 				#check to see if seperator existed. If not replace with original value
 				if len(exp_exp) == 1:
 					exp_exp = float(charts_data['Exp_Note'][chart])
 				else:
-					continue
+					exp_exp = exp_exp
 
 				chart_notes = pd.DataFrame({'Exp':exp_exp, 'Note':exp_note})
 				chart_notes = chart_notes.set_index('Exp')
@@ -244,4 +244,5 @@ for experiment in experiment_info.index:
 					contents = "".join(contents)
 					f.write(contents)
 					f.close
+					print('Added note')
 
