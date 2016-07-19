@@ -7,12 +7,12 @@ Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max,Exp
 6TC,A103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 7TC,Pallet Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 8TC,C101 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
-9TC,C101 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
-10TC,C100 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
-11TC,C100 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
+9TC,C101 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36
+10TC,C100 West Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36
+11TC,C100 East Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,17,Sensor error after 11:38:00
 12TC,C102 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
 13TC,C103 Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,2,Sensor error between 11:47:30-11:49:30. Reading of elevated temperature is not accurate.
-14TC,Smoke Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,,
+14TC,Smoke Prop Hallway Temperatures,Temperature,Degrees Fahrenheit,0,200,top_left,Degrees Celsius,-17.77777778,93.33333333,18,Sensor error after 14:47:36
 15TC,B103 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 16TC,B102 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 17TC,B104 Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
@@ -24,9 +24,9 @@ Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max,Exp
 Heat_Flux_A,Pallet Prop Heat Flux,kW/m2,kW/m2,0,10,top_left,,,,,
 Gas_A,Pallet Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,,,
 Carbon_Monoxide_A,Pallet Prop Gas Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,,
-Heat_Flux_B,OSB Prop Heat Flux,kW/m2,kW/m2,0,10,top_left,,,,,
-Gas_B,OSB Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,,4,Sensor error before 09:33:34
-Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,,
-Heat_Flux_C,Smoke Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,,,
+Heat_Flux_B,OSB Prop Heat Flux,kW/m2,kW/m2,0,15,top_left,,,,,
+Gas_B,OSB Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
+Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
+Heat_Flux_C,Smoke Prop Heat Flux,kW/m2,kW/m2,0,5,top_left,,,,17,Sensor error before 11:14:43
 Gas_C,Smoke Prop Gas Concentration,Percent,Percent Concentration,0,25,bottom_right,,,,,
 Carbon_Monoxide_C,Smoke Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,,
