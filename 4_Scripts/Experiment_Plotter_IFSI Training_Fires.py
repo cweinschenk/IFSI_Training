@@ -42,10 +42,10 @@ info_file = '../3_Info/Description_of_Experiments.csv'
 #Set Tools for Bokeh Plots
 TOOLS = 'box_zoom,reset,hover,pan,wheel_zoom'
 
-# experiments=[2]
-# prop = ['C']
-experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
+experiments=[18]
+prop = ['C']
+# experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+# prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
 
 charts_to_skip = {10: ['Gas_A','Carbon_Monoxide_A'], 18:['13TC']}
 
@@ -201,7 +201,7 @@ for experiment in experiment_info.index:
 			if chart in ['9TC','10TC','14TC']:
 				if experiment == 18:
 					print ('adding patch')
-					p.patch([End_Time - timedelta(minutes=5,seconds=50), End_Time - timedelta(minutes=3,seconds=50), End_Time, End_Time], 
+					p.patch([End_Time - timedelta(minutes=5,seconds=50), End_Time - timedelta(minutes=5,seconds=50), End_Time, End_Time], 
 						[charts_data['Y_Min'][chart], charts_data['Y_Max'][chart],  charts_data['Y_Max'][chart], charts_data['Y_Min'][chart]], color="grey", alpha=0.5, line_width=1)	
 			save(p)	
 			reset_output()
