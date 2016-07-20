@@ -42,8 +42,8 @@ info_file = '../3_Info/Description_of_Experiments.csv'
 #Set Tools for Bokeh Plots
 TOOLS = 'box_zoom,reset,hover,pan,wheel_zoom'
 
-experiments=[18]
-prop = ['C']
+experiments=[13]
+prop = ['B']
 # experiments = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
 # prop = ['C','C','C','B','B','B','A','A','A','A','A','A','B','B','B','C','C','C']
 
@@ -216,9 +216,9 @@ for experiment in experiment_info.index:
 				
 				#Read in the notes
 				exp_note = charts_data['Notes'][chart]
-				
+
 				#Seperate if more than 1 note
-				exp_note = exp_note.split('|',1)
+				exp_note = exp_note.split('|')
 				
 				#Seperate if more than one experiment
 				exp_exp = np.fromstring(charts_data['Exp_Note'][chart], sep='|')
@@ -245,4 +245,128 @@ for experiment in experiment_info.index:
 					f.write(contents)
 					f.close
 					print('Added note')
+
+	#Plot Heat Flux Helmet Data
+	HF_Dir = '../2_Data/Experiment_' + str(experiment) + '/HeatFlux_Helmet/'
+	if os.path.isdir(HF_Dir):
+		files = os.listdir(HF_Dir)
+
+		for file in files:
+			
+			if '.DS' in file:
+				continue
+			elif experiment == 12 and 'Ignition' in file:
+				continue
+			elif experiment == 8 and 'Ignition' in file:
+				continue
+			elif experiment == 9 and 'Ignition' in file:
+				continue
+			elif experiment == 13 and 'Ignition' in file:
+				continue
+			elif experiment == 14 and 'Ignition' in file:
+				continue
+			elif experiment == 17 and 'Ignition' in file:
+				continue
+			else:
+
+				chart = file[:-4]
+				HF_Data = pd.read_csv(HF_Dir + file)
+
+				Time = [datetime.strptime(t, '%m/%d/%y_%H:%M:%S') for t in HF_Data['Time']]
+
+				if "Attack" in file:
+					channel_list = pd.read_csv(channel_location+'Helmet1_Channels.csv')
+					if experiment == 13:
+						Time = [t - timedelta(minutes=5, seconds=11) for t in Time]
+					elif experiment == 6:
+						Time = [t - timedelta(minutes=5, seconds=13) for t in Time]
+				if 'Instructor' in file:
+					channel_list = pd.read_csv(channel_location+'Helmet2_Channels.csv')
+
+				#Sort by Channel Name
+				channel_list = channel_list.sort_values('Channel_Name', ascending=False)
+
+				# Set index value for channels as 'Channel'
+				channel_list = channel_list.set_index('Channel_Name')
+
+				print ("----- Plotting " + chart + " Chart -----")
+
+				# Create First Figure for HF Plot with set x-axis, set size, and available tools in bokeh package
+				output_file(output_location + chart + '.html',mode='cdn')
+				x_label = 'Time (min) ' + str(Time[0].hour) + ':00 hour'
+				range_y = Range1d(0,20)
+				range_x = Range1d(Start_Time,End_Time)
+				y_label = 'Heat Flux (kW/m2)'
+				p1 = figure( x_axis_label=x_label, y_axis_label=y_label, x_axis_type='datetime',  height=500, width=1200, title=file[-4],x_range = range_x, y_range=range_y, tools=TOOLS)
+
+				#Create Second Figure for HF Plot with set x-axis, set size, and available tools in bokeh package
+				x_label = 'Time (min) ' + str(Time[0].hour) + ':00 hour'
+				range_y = Range1d(0,1000)
+				y_label = 'Temperature (Degrees F)'
+				p2 = figure( x_axis_label=x_label, y_axis_label=y_label, x_axis_type='datetime',  height=500, width=1200, title=file[-4],x_range = range_x, y_range=range_y, tools=TOOLS)
+
+				# Define 20 color pallet using RGB values. 
+				# Must be done under chart loop so each chart starts with the same colors
+				tableau20 = cycle([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187, 120),
+							(44, 160, 44), (152, 223, 138), (214, 39, 40), (255, 152, 150),
+							(148, 103, 189), (197, 176, 213), (140, 86, 75), (196, 156, 148),
+							(227, 119, 194), (247, 182, 210), (127, 127, 127), (199, 199, 199),
+							(188, 189, 34), (219, 219, 141), (23, 190, 207), (158, 218, 229)])
+				color=tableau20
+
+				for channel in channel_list.index.values:
+
+					if "HF" in channel:
+						print(channel)
+						if experiment == 4:
+							data = -1 * HF_Data[' '+	channel] * channel_list['Scale_Factor'][channel] + channel_list['Offset'][channel]
+						else:
+							data = HF_Data[' '+	channel] * channel_list['Scale_Factor'][channel] + channel_list['Offset'][channel]
+						cutoff = 50
+						fs = 700	
+						data = butter_lowpass_filtfilt(data, cutoff, fs)
+						channel_label = np.tile(channel_list['Channel_Label'][channel],[len(data),1])
+						Time_label = [datetime.strftime(t, '%H:%M:%S') for t in Time]
+						source = ColumnDataSource({'channels':channel_label, 'Time':Time_label})
+						p1.line(Time,data, legend=channel_list['Channel_Label'][channel], line_width=2, color=next(color), source=source)
+						hover=p1.select(dict(type=HoverTool))
+						hover.tooltips = [('Channel','@channels'),('Time','@Time'),('Heat Flux (kW/m2)','$y{0.0}')]
+
+					if 'TC' in channel:
+						print(channel)
+						data = HF_Data[' '+channel] * channel_list['Scale_Factor'][channel]+channel_list['Offset'][channel]
+						cutoff = 50
+						fs = 700	
+						data = butter_lowpass_filtfilt(data, cutoff, fs)
+						channel_label = np.tile(channel_list['Channel_Label'][channel],[len(data),1])
+						Time_label = [datetime.strftime(t, '%H:%M:%S') for t in Time]
+						source = ColumnDataSource({'channels':channel_label, 'Time':Time_label})
+						p2.line(Time,data, legend=channel_list['Channel_Label'][channel], line_width=2, color=next(color), source=source)
+						hover=p2.select(dict(type=HoverTool))
+						hover.tooltips = [('Channel','@channels'),('Time','@Time'),('Temperature (Degrees F)','$y{0.0}')]
+
+
+				p2.extra_y_ranges={'Temperature (Degrees C)':Range1d((0-32)/1.8,(1000-32)/1.8)}
+				p2.add_layout(LinearAxis(y_range_name='Temperature (Degrees C)', axis_label='Temperature (Degrees C)'), 'right')
+
+				for event in event_data.index:
+					event_time = datetime.strptime(event_data['Time'][event], '%m/%d/%y %H:%M:%S')
+					event_line = Span(location=(event_time-timedelta(hours=4)).timestamp()*1000, dimension = 'height', line_color = 'black', line_width=3)
+					p1.add_layout(event_line)
+					p1.text((event_time-timedelta(hours=4)).timestamp()*1000, 20*.95, text=[event_data['Event'][event]], angle=1.57, text_align='right')
+
+
+				for event in event_data.index:
+					event_time = datetime.strptime(event_data['Time'][event], '%m/%d/%y %H:%M:%S')
+					event_line = Span(location=(event_time-timedelta(hours=4)).timestamp()*1000, dimension = 'height', line_color = 'black', line_width=3)
+					p2.add_layout(event_line)
+					p2.text((event_time-timedelta(hours=4)).timestamp()*1000, 1000*.95, text=[event_data['Event'][event]], angle=1.57, text_align='right')
+				
+				if experiment == 4:
+					p = vplot(p1)
+				else:
+					p = vplot(p1,p2)
+
+				save(p)	
+				reset_output()
 
