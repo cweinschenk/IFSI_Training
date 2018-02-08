@@ -1,12 +1,12 @@
 Event,Time,From Background,From Ignition
-Background,6/28/16 11:18:00,,
-Ignition Smoke Barrells,6/28/16 11:28:00,0:10:00,0:00:00
-Ignition Rooms,6/28/16 11:38:10,0:20:10,0:10:10
-Student Arrival,6/28/16 11:40:30,0:22:30,0:12:30
-Entry,6/28/16 11:42:32,0:24:32,0:14:32
-Victim 1 Out,6/28/16 11:43:50,0:25:50,0:15:50
-Victim 2 Out,6/28/16 11:45:00,0:27:00,0:17:00
-Students Exit,6/28/16 11:50:35,0:32:35,0:22:35
-Engine to Research,6/28/16 11:51:53,0:33:53,0:23:53
-Truck to Research,6/28/16 11:52:16,0:34:16,0:24:16
-End of Experiment,6/28/16 11:54:00,0:36:00,0:26:00
+Background,6/28/2016 11:18,,
+Ignition Smoke Barrells,6/28/2016 11:28,0:10:00,0:00:00
+Ignition Rooms,6/28/2016 11:38,0:20:10,0:10:10
+Student Arrival,6/28/2016 11:40,0:22:30,0:12:30
+Entry,6/28/2016 11:42,0:24:32,0:14:32
+Victim 1 Out,6/28/2016 11:43,0:25:50,0:15:50
+Victim 2 Out,6/28/2016 11:45,0:27:00,0:17:00
+Exit Prop,6/28/2016 11:50,0:32:35,0:22:35
+Engine to Research,6/28/2016 11:51,0:33:53,0:23:53
+Truck to Research,6/28/2016 11:52,0:34:16,0:24:16
+End of Experiment,6/28/2016 11:54,0:36:00,0:26:00

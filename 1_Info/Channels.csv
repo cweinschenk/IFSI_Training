@@ -1,0 +1,101 @@
+Channel,Label,Scale Factor,Offset,Transport,Type,Chart,Structure
+1TC1,1 Foot,1.8,32,0,Temperature,1TC,A
+1TC3,3 Foot,1.8,32,0,Temperature,1TC,A
+1TC5,5 Foot,1.8,32,0,Temperature,1TC,A
+1TC7,7 Foot,1.8,32,0,Temperature,1TC,A
+2TC1,1 Foot,1.8,32,0,Temperature,2TC,A
+2TC3,3 Foot,1.8,32,0,Temperature,2TC,A
+2TC5,5 Foot,1.8,32,0,Temperature,2TC,A
+2TC7,7 Foot,1.8,32,0,Temperature,2TC,A
+3TC1,1 Foot,1.8,32,0,Temperature,3TC,A
+3TC3,3 Foot,1.8,32,0,Temperature,3TC,A
+3TC5,5 Foot,1.8,32,0,Temperature,3TC,A
+3TC7,7 Foot,1.8,32,0,Temperature,3TC,A
+4TC1,1 Foot,1.8,32,0,Temperature,4TC,A
+4TC3,3 Foot,1.8,32,0,Temperature,4TC,A
+4TC5,5 Foot,1.8,32,0,Temperature,4TC,A
+4TC7,7 Foot,1.8,32,0,Temperature,4TC,A
+5TC1,1 Foot,1.8,32,0,Temperature,5TC,A
+5TC3,3 Foot,1.8,32,0,Temperature,5TC,A
+5TC5,5 Foot,1.8,32,0,Temperature,5TC,A
+5TC7,7 Foot,1.8,32,0,Temperature,5TC,A
+6TC1,1 Foot,1.8,32,0,Temperature,6TC,A
+6TC3,3 Foot,1.8,32,0,Temperature,6TC,A
+6TC5,5 Foot,1.8,32,0,Temperature,6TC,A
+6TC7,7 Foot,1.8,32,0,Temperature,6TC,A
+7TC1,1 Foot,1.8,32,0,Temperature,7TC,A
+7TC3,3 Foot,1.8,32,0,Temperature,7TC,A
+7TC5,5 Foot,1.8,32,0,Temperature,7TC,A
+7TC7,7 Foot,1.8,32,0,Temperature,7TC,A
+HF1V,A100 Floor Heat Flux,1842,0,0,HeatFlux,Heat_Flux_A,A
+HF2V,A102 Floor Heat Flux,1878,0,0,HeatFlux,Heat_Flux_A,A
+G1O2V,C102 Oxygen,5,0,0,Gas,Gas_A,A
+G1COV,C102 Carbon Monoxide,10000,0,0,Gas (PPM),Carbon_Monoxide_A,A
+G1CO2V,C102 Carbon Dioxide,5,0,0,Gas,Gas_A,A
+G2O2V,C103 Oxygen,5,0,0,Gas,Gas_A,A
+G2COV,C103 Carbon Monoxide,10000,0,0,Gas (PPM),Carbon_Monoxide_A,A
+G2CO2V,C103 Carbon Dioxide,5,0,0,Gas,Gas_A,A
+8TC1,1 Foot,1.8,32,0,Temperature,8TC,C
+8TC3,3 Foot,1.8,32,0,Temperature,8TC,C
+8TC5,5 Foot,1.8,32,0,Temperature,8TC,C
+8TC7,7 Foot,1.8,32,0,Temperature,8TC,C
+9TC1,1 Foot,1.8,32,0,Temperature,9TC,C
+9TC3,3 Foot,1.8,32,0,Temperature,9TC,C
+9TC5,5 Foot,1.8,32,0,Temperature,9TC,C
+9TC7,7 Foot,1.8,32,0,Temperature,9TC,C
+10TC1,1 Foot,1.8,32,0,Temperature,10TC,C
+10TC3,3 Foot,1.8,32,0,Temperature,10TC,C
+10TC5,5 Foot,1.8,32,0,Temperature,10TC,C
+10TC7,7 Foot,1.8,32,0,Temperature,10TC,C
+11TC1,1 Foot,1.8,32,0,Temperature,11TC,C
+11TC3,3 Foot,1.8,32,0,Temperature,11TC,C
+11TC5,5 Foot,1.8,32,0,Temperature,11TC,C
+11TC7,7 Foot,1.8,32,0,Temperature,11TC,C
+12TC1,1 Foot,1.8,32,0,Temperature,12TC,C
+12TC3,3 Foot,1.8,32,0,Temperature,12TC,C
+12TC5,5 Foot,1.8,32,0,Temperature,12TC,C
+12TC7,7 Foot,1.8,32,0,Temperature,12TC,C
+13TC1,1 Foot,1.8,32,0,Temperature,13TC,C
+13TC3,3 Foot,1.8,32,0,Temperature,13TC,C
+13TC5,5 Foot,1.8,32,0,Temperature,13TC,C
+13TC7,7 Foot,1.8,32,0,Temperature,13TC,C
+14TC1,1 Foot,1.8,32,0,Temperature,14TC,C
+14TC3,3 Foot,1.8,32,0,Temperature,14TC,C
+14TC5,5 Foot,1.8,32,0,Temperature,14TC,C
+14TC7,7 Foot,1.8,32,0,Temperature,14TC,C
+HF3V,C100 Floor Heat Flux,1965,0,0,HeatFlux,Heat_Flux_C,C
+HF4V,C102 Floor Heat Flux,1900,0,0,HeatFlux,Heat_Flux_C,C
+15TC1,1 Foot,1.8,32,0,Temperature,15TC,B
+15TC3,3 Foot,1.8,32,0,Temperature,15TC,B
+15TC5,5 Foot,1.8,32,0,Temperature,15TC,B
+15TC7,7 Foot,1.8,32,0,Temperature,15TC,B
+16TC1,1 Foot,1.8,32,0,Temperature,16TC,B
+16TC3,3 Foot,1.8,32,0,Temperature,16TC,B
+16TC5,5 Foot,1.8,32,0,Temperature,16TC,B
+16TC7,7 Foot,1.8,32,0,Temperature,16TC,B
+17TC1,1 Foot,1.8,32,0,Temperature,17TC,B
+17TC3,3 Foot,1.8,32,0,Temperature,17TC,B
+17TC5,5 Foot,1.8,32,0,Temperature,17TC,B
+17TC7,7 Foot,1.8,32,0,Temperature,17TC,B
+18TC1,1 Foot,1.8,32,0,Temperature,18TC,B
+18TC3,3 Foot,1.8,32,0,Temperature,18TC,B
+18TC5,5 Foot,1.8,32,0,Temperature,18TC,B
+18TC7,7 Foot,1.8,32,0,Temperature,18TC,B
+19TC1,1 Foot,1.8,32,0,Temperature,19TC,B
+19TC3,3 Foot,1.8,32,0,Temperature,19TC,B
+19TC5,5 Foot,1.8,32,0,Temperature,19TC,B
+19TC7,7 Foot,1.8,32,0,Temperature,19TC,B
+20TC1,1 Foot,1.8,32,0,Temperature,20TC,B
+20TC3,3 Foot,1.8,32,0,Temperature,20TC,B
+20TC5,5 Foot,1.8,32,0,Temperature,20TC,B
+20TC7,7 Foot,1.8,32,0,Temperature,20TC,B
+21TC1,1 Foot,1.8,32,0,Temperature,21TC,B
+21TC3,3 Foot,1.8,32,0,Temperature,21TC,B
+21TC5,5 Foot,1.8,32,0,Temperature,21TC,B
+21TC7,7 Foot,1.8,32,0,Temperature,21TC,B
+22TC1,1 Foot,1.8,32,0,Temperature,22TC,B
+22TC3,3 Foot,1.8,32,0,Temperature,22TC,B
+22TC5,5 Foot,1.8,32,0,Temperature,22TC,B
+22TC7,7 Foot,1.8,32,0,Temperature,22TC,B
+HF5V,B100 Floor Heat Flux,1828,0,0,HeatFlux,Heat_Flux_B,B
+HF6V,B101 Floor Heat Flux,1859,0,0,HeatFlux,Heat_Flux_B,B
