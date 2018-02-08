@@ -1,0 +1,41 @@
+Channel_Name,Channel_Label,Scale_Factor,Offset,Type,Chart
+15TC1,1 Foot,1.8,32,Temperature,15TC
+15TC3,3 Foot,1.8,32,Temperature,15TC
+15TC5,5 Foot,1.8,32,Temperature,15TC
+15TC7,7 Foot,1.8,32,Temperature,15TC
+16TC1,1 Foot,1.8,32,Temperature,16TC
+16TC3,3 Foot,1.8,32,Temperature,16TC
+16TC5,5 Foot,1.8,32,Temperature,16TC
+16TC7,7 Foot,1.8,32,Temperature,16TC
+17TC1,1 Foot,1.8,32,Temperature,17TC
+17TC3,3 Foot,1.8,32,Temperature,17TC
+17TC5,5 Foot,1.8,32,Temperature,17TC
+17TC7,7 Foot,1.8,32,Temperature,17TC
+18TC1,1 Foot,1.8,32,Temperature,18TC
+18TC3,3 Foot,1.8,32,Temperature,18TC
+18TC5,5 Foot,1.8,32,Temperature,18TC
+18TC7,7 Foot,1.8,32,Temperature,18TC
+19TC1,1 Foot,1.8,32,Temperature,19TC
+19TC3,3 Foot,1.8,32,Temperature,19TC
+19TC5,5 Foot,1.8,32,Temperature,19TC
+19TC7,7 Foot,1.8,32,Temperature,19TC
+20TC1,1 Foot,1.8,32,Temperature,20TC
+20TC3,3 Foot,1.8,32,Temperature,20TC
+20TC5,5 Foot,1.8,32,Temperature,20TC
+20TC7,7 Foot,1.8,32,Temperature,20TC
+21TC1,1 Foot,1.8,32,Temperature,21TC
+21TC3,3 Foot,1.8,32,Temperature,21TC
+21TC5,5 Foot,1.8,32,Temperature,21TC
+21TC7,7 Foot,1.8,32,Temperature,21TC
+22TC1,1 Foot,1.8,32,Temperature,22TC
+22TC3,3 Foot,1.8,32,Temperature,22TC
+22TC5,5 Foot,1.8,32,Temperature,22TC
+22TC7,7 Foot,1.8,32,Temperature,22TC
+HF5V,B100 Floor Heat Flux,1828,0,HeatFlux,Heat_Flux_B
+HF6V,B101 Floor Heat Flux,1859,0,HeatFlux,Heat_Flux_B
+G1O2V,B101 Oxygen,5,0,Gas,Gas_B
+G1COV,B101 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
+G1CO2V,B101 Carbon Dioxide,5,0,Gas,Gas_B
+G2O2V,B100 Oxygen,5,0,Gas,Gas_B
+G2COV,B100 Carbon Monoxide,10000,0,Gas,Carbon_Monoxide_B
+G2CO2V,B100 Carbon Dioxide,5,0,Gas,Gas_B

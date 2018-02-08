@@ -1,4 +1,4 @@
-Chart,Label,Units,Y_Label,Y_Min,Y_Max,Legend_Location,2ndY,2ndY_Min,2ndY_Max,Exp_Note,Notes
+Chart,Label,Units,Y Label,Y Min,Y Max,Legend Location,2ndY,2ndY Min,2ndY Max,Exp Note,Notes
 1TC,A101 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 2TC,A101 East Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,
 3TC,A100 West Temperatures,Temperature,Degrees Fahrenheit,0,1300,top_left,Degrees Celsius,-17.77777778,704.4444444,,

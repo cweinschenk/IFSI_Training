@@ -1,12 +1,12 @@
 Event,Time,
-Background,6/25/16 9:09:00,
-Instructor Dispatch,6/25/16 9:13:00,
-Smoke Machines On,6/25/16 9:22:00,
-Student Dispatch,6/25/16 9:25:00,0:12:00
-Student Arrival,6/25/16 9:27:50,0:14:50
-Entry,6/25/16 9:29:50,0:16:50
-Victim 1 Out,6/25/16 9:30:30,0:17:30
-Victim 2 Out,6/25/16 9:31:20,0:18:20
-End Of Exercise,6/25/16 9:39:50,0:26:50
-Students  At Research Bld,6/25/16 9:42:50,0:29:50
-End of Experiment,6/25/16 9:44:00,0:31:00
+Background,6/25/2016 9:09,
+Instructor Dispatch,6/25/2016 9:13,
+Smoke Machines On,6/25/2016 9:22,
+Student Dispatch,6/25/2016 9:25,0:12:00
+Student Arrival,6/25/2016 9:27,0:14:50
+Entry,6/25/2016 9:29,0:16:50
+Victim 1 Out,6/25/2016 9:30,0:17:30
+Victim 2 Out,6/25/2016 9:31,0:18:20
+Exit Prop,6/25/2016 9:39,0:26:50
+Students  At Research Bld,6/25/2016 9:42,0:29:50
+End of Experiment,6/25/2016 9:44,0:31:00
