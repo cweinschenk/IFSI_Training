@@ -57,7 +57,7 @@ for test in test_des.index.values:
 	for event in events_df:
 		event.split('-')
 	events_dict[test] = events_df
-	# print(events_df)
+	print(events_df)
 	# exit()
 	#Read data dataframe 
 	data_df.columns = [column[13:-1] for column in data_df.columns.values]

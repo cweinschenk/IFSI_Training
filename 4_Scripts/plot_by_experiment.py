@@ -46,6 +46,7 @@ for experiment in test_des.index.values:
 	print(experiment)
 	data_df = test_data_dict[experiment]
 	events_df = test_events_dict[experiment]
+	print(events_df)
 	ff_int = 100#events_df['Time Elapsed']['Entry']
 	# end_time = events_df['Time Elapsed']['Exit Prop']
 
@@ -65,7 +66,7 @@ for experiment in test_des.index.values:
 		plot_markers = cycle(['s', 'o', '^', 'd', 'h', 'p','v','8','D','*','<','>','H'])
 		for channel in channel_groups.get_group(chart).index.values:
 			if not channel in data_df.columns:
-					continue
+				continue
 			#take 5 second moving average of the data for the channel
 			data = data_df[channel].rolling(window=5, center=True).mean()
 
@@ -85,20 +86,7 @@ for experiment in test_des.index.values:
 			data_pre = data.loc[:ff_int]
 			data_post = data.loc[ff_int:]#end_time]
 			data_at = data.loc[ff_int]
-			# if test_des['Attack Type'][experiment] == 'Transitional':
-			# 	print(channel)
-			# 	print(data.loc[water])
-			# 	# print('400-500')
-			# 	# print(min(data.loc[400:500]))
-			# 	# print(max(data.loc[400:500]))
-			# 	# print()
-			# 	print('water-door')
-			# 	print(min(data.loc[water:door]))
-			# 	i_min= data.loc[water:door].idxmin()
-			# 	print(max(data.loc[i_min:door]))
-			# 	# if experiment == 'Experiment_03':
 
-			# 	print()
 			##cycle plot markers and colors
 			color=next(tableau20)
 			marker=next(plot_markers)
