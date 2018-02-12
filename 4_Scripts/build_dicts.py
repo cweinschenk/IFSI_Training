@@ -21,6 +21,8 @@ data_dir = '../2_Data/'
 
 channels = pd.read_csv(info_dir+'Channels.csv', index_col = 'Channel')
 
+helmet_channels = pd.read_csv(info_dir+'Helmet_Channels.csv', index_col = 'Channel')
+
 #import test descriptions
 
 test_des = pd.read_csv(info_dir+'Test_Descriptions.csv',index_col = 'Test Name')
@@ -30,15 +32,10 @@ data_dict = {}
 
 for test in test_des.index.values:
 	print(test)
-	# events_df = pd.read_csv(data_dir+test+'/'+test+'_Events.csv')
 	data_df = TdmsFile(data_dir+test+'/'+test+'.tdms').as_dataframe()
 	events_df = data_df.iloc[:,-2:].dropna()
 	events_df.columns = ['Event','Time']
-	# for j in events_df.index.values:
-	# 	print(events_df['Event'][j])
-	# 	if events_df['Event'][j] == test_des['Ignition Event'][test]:
-	# 		i=j
-	# 		break
+
 
 
 	#Ignition is taken as the first event followin background
@@ -57,33 +54,18 @@ for test in test_des.index.values:
 	for event in events_df:
 		event.split('-')
 	events_dict[test] = events_df
-	print(events_df)
 	# exit()
 	#Read data dataframe 
 	data_df.columns = [column[13:-1] for column in data_df.columns.values]
 
 
-
-
 	#Make a list of elapsed time
-
 	elapsed_time = []
 	for t in data_df['Time']:
-
-		# if np.isnan(t)==True:
-		# 	continue
-		# print(t)
 		timestamp = t.split(' ')[-1]
-
 		hh,mm,ss = timestamp.split(':')
 		timestamp = 3600*int(hh)+60*int(mm)+int(ss)-int(ignition)
 		elapsed_time.append(timestamp)
-	# for i in range(len(elapsed_time)-1):
-	# 	if i == 0:
-	# 		pass
-	# 	if elapsed_time[i] == elapsed_time[i+1]:
-	# 		elapsed_time[i] = int((elapsed_time[i-1]+elapsed_time[i+1])/2)
-	# print(elapsed_time)
 
 	#Set index as elapsed time
 	data_df['Elapsed Time'] = elapsed_time
@@ -134,10 +116,65 @@ for test in test_des.index.values:
 			scaled_data = data_df[channel] * scale_factor + offset
 			scaled_data =scaled_data - np.average(scaled_data.loc[:-1])
 			scaled_data = scaled_data.round(1)
-
-
 		test_df[channel] = scaled_data
-	# print(test_df)
+
+	if not os.path.exists(data_dir+test+'/HeatFlux_Helmet/'):
+		pass
+	else:
+	#loop thru csv helmet files in directory
+		for f in os.listdir(data_dir+test+'/HeatFlux_Helmet/'):
+			if f.endswith('.csv'):
+				pass
+			else: 
+				continue
+			helmet = f[:-4]
+			wireless_df = pd.read_csv(data_dir + test + '/HeatFlux_Helmet/' + f)
+			elapsed_time = []
+			for t in wireless_df['Time']:
+				timestamp = t.split('_')[-1]
+				hh,mm,ss = timestamp.split(':')
+				timestamp = 3600*int(hh)+60*int(mm)+int(ss)-int(ignition)
+				elapsed_time.append(timestamp)
+			#find if 0 is in index, otherwise find next greatest value to serve as igntion
+			if 0 in elapsed_time:
+				ign = 0
+			else:
+				for i in range(len(elapsed_time)):
+					if elapsed_time[i] > 0:
+						ign = elapsed_time[i]
+						print('different')
+						break
+
+			wireless_df['Elapsed Time'] = elapsed_time
+			wireless_df = wireless_df.set_index('Elapsed Time')
+			wireless_df = wireless_df[~wireless_df.index.duplicated(keep='first')]
+			#if data ends before ignition, continue 
+			if wireless_df.index[-1] < 0:
+				continue
+
+			
+			#Divide data datafrane into
+			pre_exp_data = wireless_df.loc[:ign,:]
+			exp_data = wireless_df.loc[ign:,:]
+			for column in wireless_df.columns:
+				if column =='Time' or column == 'TC2':
+					continue
+				print(column)
+				if helmet_channels['Type'][column.replace(' ','').replace(' ','')] == 'Temperature':
+					scaled_data = wireless_df[column].round(1)
+
+				elif helmet_channels['Type'][column.replace(' ','')] == 'HeatFlux':
+					zero_data = wireless_df[column] - np.average(pre_exp_data[column])
+					if helmet == 'Attack_Firefighter':
+						scale_factor = helmet_channels['Scale Factor 1'][column.replace(' ','')]
+						offset = helmet_channels['Offset 1'][column.replace(' ','')]
+					elif helmet == 'Ignition_Instructor':
+						scale_factor = helmet_channels['Scale Factor 2'][column.replace(' ','')]
+						offset = helmet_channels['Offset 2'][column.replace(' ','')]
+					scaled_data = zero_data * scale_factor + offset
+					scaled_data = scaled_data.round(2)
+				test_df[helmet+'_'+column.replace(' ','')] = scaled_data
+	print(test_df)
 	# exit()
 	data_dict[test] = test_df
 pickle.dump(events_dict, open (data_dir+'events.dict','wb'))
