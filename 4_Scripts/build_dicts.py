@@ -50,6 +50,7 @@ for test in test_des.index.values:
 		event_times.append(timestamp)
 
 	events_df['Time Elapsed']=event_times
+	print(events_df)
 	events_df = events_df.set_index('Event')
 	for event in events_df:
 		event.split('-')
@@ -157,9 +158,9 @@ for test in test_des.index.values:
 			pre_exp_data = wireless_df.loc[:ign,:]
 			exp_data = wireless_df.loc[ign:,:]
 			for column in wireless_df.columns:
-				if column =='Time' or column == 'TC2':
+				if column =='Time' or column.replace(' ','') == 'TC2':
 					continue
-				print(column)
+				# print(column)
 				if helmet_channels['Type'][column.replace(' ','').replace(' ','')] == 'Temperature':
 					scaled_data = wireless_df[column].round(1)
 
@@ -174,7 +175,7 @@ for test in test_des.index.values:
 					scaled_data = zero_data * scale_factor + offset
 					scaled_data = scaled_data.round(2)
 				test_df[helmet+'_'+column.replace(' ','')] = scaled_data
-	print(test_df)
+
 	# exit()
 	data_dict[test] = test_df
 pickle.dump(events_dict, open (data_dir+'events.dict','wb'))

@@ -53,9 +53,15 @@ for experiment in test_des.index.values:
 	print(experiment)
 	data_df = test_data_dict[experiment]
 	events_df = test_events_dict[experiment]
+	print(events_df)
 	ff_int = 100#events_df['Time Elapsed']['Entry']
-	# end_time = events_df['Time Elapsed']['Exit Prop']
+	end_time = events_df['Time Elapsed']['End Experiment']
+
+
 	for chart in channel_groups.groups:
+		if test_des['Structure'][experiment] in str(charts['Skip'][chart]).split('|'):
+			print('skip')
+			continue
 		# print(chart)
 		fig=plt.figure()
 		tableau20 = ([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187, 120),
@@ -100,22 +106,21 @@ for experiment in test_des.index.values:
 		plt.xticks(fontsize=16)
 		plt.yticks(fontsize=16)
 
-		# plt.xlim([0,end_time])
+		plt.xlim([0,end_time])
 		plt.ylim([charts['Y Min'][chart],charts['Y Max'][chart]])
 		ax1 = plt.gca()
 		ax2=ax1.twiny()
-		eventtime=list(range(len(events_df.index.values)))
+		# eventtime=list(range(len(events_df.index.values[int(test_des['Ignition Event Index'][test]):])))
 
-		for i in events_df['Time Elapsed']:
+		for i in events_df['Time Elapsed'][int(test_des['Ignition Event Index'][experiment]):]:
 			plt.axvline(i,color='0',lw=1) 
 
-		ax2.set_xticks(events_df['Time Elapsed'])
+
+		ax2.set_xticks(events_df['Time Elapsed'][int(test_des['Ignition Event Index'][experiment]):])
 		plt.setp(plt.xticks()[1], rotation=45)
-		ax2.set_xticklabels(events_df.index.values, fontsize=14, ha='left')
-		# if secondary_chart_flag == True:
-		# 	ax2.set_xlim(fd,600)
-		# else:
-		# ax2.set_xlim(0,end_time)
+		ax2.set_xticklabels(events_df.index.values[int(test_des['Ignition Event Index'][experiment]):], fontsize=14, ha='left')
+		ax2.set_xlim([0,end_time])
+
 
 		
 			
@@ -192,18 +197,20 @@ for experiment in test_des.index.values:
 		plt.xticks(fontsize=16)
 		plt.yticks(fontsize=16)
 
-		# plt.xlim([0,end_time])
+		plt.xlim([0,end_time])
 		plt.ylim([charts['Y Min'][chart],charts['Y Max'][chart]])
 		ax1 = plt.gca()
 		ax2=ax1.twiny()
-		eventtime=list(range(len(events_df.index.values)))
+		# eventtime=list(range(len(events_df.index.values[int(test_des['Ignition Event Index'][test]):])))
 
-		for i in events_df['Time Elapsed']:
+		for i in events_df['Time Elapsed'][int(test_des['Ignition Event Index'][experiment]):]:
 			plt.axvline(i,color='0',lw=1) 
 
-		ax2.set_xticks(events_df['Time Elapsed'])
+
+		ax2.set_xticks(events_df['Time Elapsed'][int(test_des['Ignition Event Index'][experiment]):])
 		plt.setp(plt.xticks()[1], rotation=45)
-		ax2.set_xticklabels(events_df.index.values, fontsize=14, ha='left')
+		ax2.set_xticklabels(events_df.index.values[int(test_des['Ignition Event Index'][experiment]):], fontsize=14, ha='left')
+		ax2.set_xlim([0,end_time])
 
 		
 			

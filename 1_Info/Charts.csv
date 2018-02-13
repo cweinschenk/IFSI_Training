@@ -1,34 +1,34 @@
-Chart,Label,Units,Y Label,Y Min,Y Max,Legend Location,2ndY,2ndY Min,2ndY Max,Exp Note,Notes
-1TC,A101 West Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-2TC,A101 East Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-3TC,A100 West Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-4TC,A100 East Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-5TC,A102 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-6TC,A103 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-7TC,Pallet Prop Hallway Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-8TC,C101 West Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
-9TC,C101 East Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,18,Sensor error after 14:47:36
-10TC,C100 West Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
-11TC,C100 East Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,17|18,Sensor error after 11:38:00|Sensor error after 14:47:36
-12TC,C102 Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
-13TC,C103 Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,2,Sensor error between 11:47:30-11:49:30. Reading of elevated temperature is not accurate.
-14TC,Smoke Prop Hallway Temperatures,Temperature,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,18,Sensor error after 14:47:36
-15TC,B103 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-16TC,B102 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-17TC,B104 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-18TC,B105 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-19TC,B101 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-20TC,North B100 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-21TC,East Door B100 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-22TC,South B100 Temperatures,Temperature,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
-Heat_Flux_A,Pallet Prop Heat Flux,kW/m$^2$,Heat Flux ,0,10,top_left,,,,,
-Gas_A,Pallet Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,,,
-Carbon_Monoxide_A,Pallet Prop Gas Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,,
-Heat_Flux_B,OSB Prop Heat Flux,kW/m$^2$,Heat Flux ,0,15,top_left,,,,,
-Gas_B,OSB Prop Gas Concentrations,Percent,Percent Concentration,0,25,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
-Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
-Heat_Flux_C,Smoke Prop Heat Flux,kW/m$^2$,Heat Flux ,0,5,top_left,,,,17,Sensor error before 11:14:43
-Gas_C,Smoke Prop Gas Concentration,Percent,Percent Concentration,0,25,bottom_right,,,,,
-Carbon_Monoxide_C,Smoke Prop Carbon Monoxide,PPM,PPM,0,30000,bottom_right,,,,,
-Helmet Flux,Helmet Flux,kW/m$^2$,Heat Flux ,0,12,top_left,,,,,
-Helmet Temperatures,Helmet Temperatures,Temperature,Temperature ($^{\circ}$C,0,500,top_left,,,,,
+Chart,Label,Units,Skip,Y Label,Y Min,Y Max,Legend Location,2ndY,2ndY Min,2ndY Max,Exp Note,Notes
+1TC,A101 West Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+2TC,A101 East Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+3TC,A100 West Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+4TC,A100 East Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+5TC,A102 Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+6TC,A103 Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+7TC,Pallet Prop Hallway Temperatures,Temperature,B|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+8TC,C101 West Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
+9TC,C101 East Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,18,Sensor error after 14:47:36
+10TC,C100 West Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
+11TC,C100 East Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,17|18,Sensor error after 11:38:00|Sensor error after 14:47:36
+12TC,C102 Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,,
+13TC,C103 Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,2,Sensor error between 11:47:30-11:49:30. Reading of elevated temperature is not accurate.
+14TC,Smoke Prop Hallway Temperatures,Temperature,A|B,Temperature ($^{\circ}$C,0,93.33333333,top_left,Temperature ($^{\circ}$F,32,200,18,Sensor error after 14:47:36
+15TC,B103 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+16TC,B102 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+17TC,B104 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+18TC,B105 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+19TC,B101 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+20TC,North B100 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+21TC,East Door B100 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+22TC,South B100 Temperatures,Temperature,A|C,Temperature ($^{\circ}$C,0,704.4444444,top_left,Temperature ($^{\circ}$F,32,1300,,
+Heat_Flux_A,Pallet Prop Heat Flux,kW/m$^2$,,Heat Flux ,0,10,top_left,,,,,
+Gas_A,Pallet Prop Gas Concentrations,Percent,,Percent Concentration,0,25,bottom_right,,,,,
+Carbon_Monoxide_A,Pallet Prop Gas Carbon Monoxide,PPM,,PPM,0,30000,bottom_right,,,,,
+Heat_Flux_B,OSB Prop Heat Flux,kW/m$^2$,,Heat Flux ,0,15,top_left,,,,,
+Gas_B,OSB Prop Gas Concentrations,Percent,,Percent Concentration,0,25,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
+Carbon_Monoxide_B,OSB Prop Carbon Monoxide,PPM,,PPM,0,30000,bottom_right,,,,4|5|12|14|16,Sensor error before 09:33:34|Sensor error before 11:57:29|Sensor error before 14:16:24|Sensor error before 11:31:53|Sensor error before 08:43:10
+Heat_Flux_C,Smoke Prop Heat Flux,kW/m$^2$,,Heat Flux ,0,5,top_left,,,,17,Sensor error before 11:14:43
+Gas_C,Smoke Prop Gas Concentration,Percent,,Percent Concentration,0,25,bottom_right,,,,,
+Carbon_Monoxide_C,Smoke Prop Carbon Monoxide,PPM,,PPM,0,30000,bottom_right,,,,,
+Helmet Flux,Helmet Flux,kW/m$^2$,,Heat Flux ,0,12,top_left,,,,,
+Helmet Temperatures,Helmet Temperatures,Temperature,,Temperature ($^{\circ}$C,0,500,top_left,,,,,
