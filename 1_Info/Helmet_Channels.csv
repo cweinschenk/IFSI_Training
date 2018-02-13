@@ -1,0 +1,4 @@
+Channel,Label,Scale Factor 1,Offset 1,Scale Factor 2,Offset 2,Type,Chart
+TC1,Temperature,1.8,32,1.8,32,Temperature,Helmet Temperatures
+HF1,Horizontal Heat Flux,1883,0,1820,0,HeatFlux,Helmet Flux
+HF2,Vertical Heat Flux,1757,0,2088,0,HeatFlux,Helmet Flux
